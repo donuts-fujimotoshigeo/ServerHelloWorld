@@ -17,11 +17,11 @@ def hello_world_routed():
         return "<p>Hello, World! from a request</p>"
 
 @app.route("/hello/<name>")
-def hello_world(name):
+def hello_world_with_name(name):
     return f"<p>Hello, {escape(name)}!</p>"
 
 @app.get("/hello/decorator")
-def hello_world_post():
+def hello_world_get():
     return "<p>Hello, World! from a GET request using the decorator</p>"
 
 @app.post("/hello/decorator")
